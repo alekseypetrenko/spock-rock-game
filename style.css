@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
 
 html {
   box-sizing: border-box;
@@ -7,17 +8,25 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-
-  font-family: Lato, sans-serif;
+  background: whitesmoke;
+  font-family: DynaPuff, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-
+.game-container {
+  width: 530px;
+  height: 600px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px -5px rgba(0,0,0, 0.5);
+}
 
 .header {
   background: dodgerblue;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 
   display: flex;
   justify-content: center;
@@ -37,14 +46,32 @@ h2 {
   margin-bottom: 20px;
 }
 
-.far {
+.fas {
   font-size: 50px;
   margin-right: 40px;
   User-select: none;
 }
 
+#player .fas,
+#player .choice {
+  color: dodgerblue;
+  cursor: pointer;
+}
 
+#computer .fas,
+#computer .choice {
+  color: rgb(192, 77, 77);
+  cursor: pointer;
+}
 
+#player .fas:last-of-type,
+#computer .fas:last-of-type {
+  margin-right: 0;
+}
+
+.selected {
+  color: black !important;
+}
 .reset-icon {
   font-size: 30px;
   cursor: pointer;
@@ -78,7 +105,7 @@ h2 {
     margin: 50px 0 25px 25px;
   }
 
-  .far {
+  .fas {
     margin-right: 20px;
   }
 
@@ -91,6 +118,7 @@ h2 {
 /* Media Query: iPhone (Vertical) */
 @media screen and (max-width: 376px) {
   .game-container {
+    width: 95%;
     height: 550px;
   }
 
@@ -102,7 +130,7 @@ h2 {
     margin: 43px 0 25px 20px;
   }
 
-  .far {
+  .fas {
     font-size: 43px;
   }
 
