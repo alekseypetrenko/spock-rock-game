@@ -23,15 +23,36 @@
           You - <span id="playerScore">0</span
           ><span class="choice" id="playerChoice"> --- Choice</span>
         </h2>
-        <i class="fas fa-hand-rock" title="Rock" id="playerRock"></i>
-        <i class="fas fa-hand-paper" title="Paper" id="playerPaper"></i>
+        <i
+          class="fas fa-hand-rock"
+          title="Rock"
+          id="playerRock"
+          onclick="select('rock')"
+        ></i>
+        <i
+          class="fas fa-hand-paper"
+          title="Paper"
+          id="playerPaper"
+          onclick="select('paper')"
+        ></i>
         <i
           class="fas fa-hand-scissors"
           title="Scissors"
           id="playerScissors"
+          onclick="select('scissors')"
         ></i>
-        <i class="fas fa-hand-lizard" title="Lizard" id="playerLizard"></i>
-        <i class="fas fa-hand-spock" title="Spock" id="playerSpock"></i>
+        <i
+          class="fas fa-hand-lizard"
+          title="Lizard"
+          id="playerLizard"
+          onclick="select('lizard')"
+        ></i>
+        <i
+          class="fas fa-hand-spock"
+          title="Spock"
+          id="playerSpock"
+          onclick="select('spock')"
+        ></i>
       </div>
       <!-- Computer Container -->
       <div class="player-container" id="computer">
@@ -50,7 +71,7 @@
         <i class="fas fa-hand-spock" title="Spock" id="computerSpock"></i>
       </div>
       <!-- Resest Icon -->
-      <i class="fas fa-sync-alt reset-icon" title="Reset"></i>
+      <i class="fa fa-sync-alt reset-icon" title="Reset"></i>
       <!-- Results text -->
       <div class="result-container">
         <h3 class="result-text" id="resultText">You Won</h3>
