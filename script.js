@@ -29,11 +29,17 @@ function updateScore(playerChoice) {
     if (choice.defeats.includes(computerChoice)) {
       resultText.textContent = "You Won!";
       playerScore++;
+      import("./confetti.js").then((module) => {
+        module.startConfetti();
+      });
       playerScoreEl.textContent = playerScore;
     } else {
       resultText.textContent = "You Lose!";
       computerScore++;
       computerScoreEl.textContent = computerScore;
+      import("./confetti.js").then((module) => {
+        module.stopConfetti();
+      });
     }
   }
 }
@@ -75,6 +81,7 @@ function select(playerChoice) {
     playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1)
   }`;
 }
+// window.select = select;
 
 reset.addEventListener("click", function () {
   playerScore = 0;
@@ -85,4 +92,7 @@ reset.addEventListener("click", function () {
   computerChoiceEl.textContent = " --- Choice";
   resultText.textContent = "Click on the button";
   resetSelection();
+  import("./confetti.js").then((module) => {
+    module.removeConfetti();
+  });
 });
